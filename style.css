@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button, .btn {
+    background: #2575fc;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: #1a5fcc;
+}
+
+.options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.error {
+    background: #ffdddd;
+    color: #f44336;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success {
+    background: #ddffdd;
+    color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.user-info p {
+    margin: 10px 0;
+}
+/* أنماط صفحة القرآن */
+.quran-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.sura-selector {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.sura-selector select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sura-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    line-height: 2.5;
+    font-size: 22px;
+    font-family: 'Traditional Arabic', 'Arial', sans-serif;
+    direction: rtl;
+}
+
+.sura-title {
+    text-align: center;
+    font-size: 28px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background: #1976D2;
+}
+
+.ayah {
+    margin: 15px 0;
+    padding: 10px;
+    border-right: 3px solid #4CAF50;
+}
+
+.ayah-number {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-left: 5px;
+}
+/* تذييل الموقع */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #2196F3, #9C27B0, #FF9800);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.developer {
+    color: #3498db;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.supervisor {
+    color: #e74c3c;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.footer-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.decoration-line {
+    height: 2px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+
+.decoration-icon {
+    font-size: 20px;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container, .quran-container {
+    flex: 1;
+}
+
+
+.footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cairo', sans-serif;
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.decoration-line {
+    flex: 1;
+    height: 1px;
+    background-color: #ac0e0e;
+}
+
+.decoration-icon {
+    margin: 0 10px;
+    font-size: 18px;
+}
