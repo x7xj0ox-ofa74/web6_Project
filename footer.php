@@ -17,7 +17,6 @@ if (in_array($currentFile, $protectedPages)) {
 }
 ?>
 
-<!-- تذييل الصفحة -->
 <link rel="stylesheet" href="footer-style.css">
 
 <div class="footer">
